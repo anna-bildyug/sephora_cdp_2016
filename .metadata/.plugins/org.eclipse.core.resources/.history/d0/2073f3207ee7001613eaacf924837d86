@@ -1,0 +1,36 @@
+package com.epam.cdp.volha_ivanova.task2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		
+		ArrayList list = new ArrayList();
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter block size");
+        int blockSize = scanner.nextInt();
+        System.out.println("Enter data rows:");
+        int count = 0;
+        while (count < blockSize) {
+            list.add(scanner.next());
+            list.add(scanner.next());
+            list.add(scanner.next());
+            count++;
+        }
+        System.out.println("\nThe data you entered is:");
+        System.out.println(list);
+		
+		
+		
+		
+		
+	 
+		
+
+	}
+
+}

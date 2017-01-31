@@ -1,0 +1,57 @@
+package com.epam.cdp.volha_ivanova_task1;
+
+public class Runner {
+
+	int [] arr1;
+	int tempMax;
+	int tempMin;
+		
+	public static void main(String[] args) {
+    int [] arr1 = new int [20];    // declare massive and its length
+    int min = -10;
+    int max = 10;
+    int j = min;
+    
+   
+   
+    for (int i=0; i<arr1.length; i++) { // filling massive
+    	while (j < max) { 
+    		if (j!=0) {
+    	arr1[i] = j;
+    	j++;
+    	//System.out.println(arr1[i]);
+    	}  	else {j++;}
+    	}
+    }
+    
+    
+   
+    
+    for (int i=0; i<arr1.length; i++) { // find maximum negative value
+    	 int maxNeg = i;
+    	for (j=i+1; j<arr1.length; j++) {
+    	if (arr1[j] < arr1[maxNeg]) {
+    		maxNeg = j;
+        }
+    	}
+    	int tempMax = arr1[maxNeg];
+    }
+    
+    
+    
+    for (int a=0; a<arr1.length; a++) { // find minimum positive value
+    	int minPos=a;
+    	for (int b=a+1; b<arr1.length; b++) {
+    	if (arr1[b] < arr1[minPos]) {
+    		minPos = b;
+    	}
+    	}
+    	int tempMin = arr1[minPos];
+	}
+	}
+
+	arr1[maxNeg] = tempMin;
+	arr1[minPos] = tempMax;
+}		   
+}
+	

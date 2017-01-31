@@ -1,0 +1,26 @@
+package com.epam.cdp.volha_ivanova.task2;
+
+import java.util.Scanner;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		String line1 = scanner.nextLine();
+		
+		//Scanner scanner2 = new Scanner(System.in);
+		String line2 = scanner.nextLine();
+		String line3 = scanner.nextLine();
+		String line4 = scanner.nextLine();
+		
+		
+	    System.out.println(line1.length());
+	    System.out.println(line2.length());
+	    System.out.println(line3.length());
+		
+		
+
+	}
+
+}
