@@ -4,31 +4,30 @@ import java.util.Scanner;
 
 public class Runner {
 
-	/**
-	 * @param msg to display for input
-	 * @return input
-	 */
-	public static String getInput(String msg) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print(msg);
-        String input = scanner.nextLine();
-        
-        if("q".equals(input)) {
-        	scanner.close();
-        	System.exit(0);
-        }
-        
-        return input;
-	}
-
+	private static final String EXIT_INPUT = "q";
+	
 	public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+		Calculator calculator = new Calculator();
+        Scanner scanner = new Scanner(System.in);
 		while(true) {
-	        String value1 = getInput("Enter first value or q to exit: ");
-	        String value2 = getInput("Enter second value or q to exit: ");
-	        String operation = getInput("Enter operation (+, -, *, /) or q to exit: ");
+			System.out.print("Enter first value or q to exit: ");
+			String value1 = scanner.nextLine();
+	        if(EXIT_INPUT.equals(value1)) {
+	        	break;
+	        }
 
+	        System.out.print("Enter first value or q to exit: ");
+			String value2 = scanner.nextLine();
+	        if(EXIT_INPUT.equals(value2)) {
+	        	break;
+	        }
+
+	        System.out.print("Enter first value or q to exit: ");
+			String operation = scanner.nextLine();
+	        if(EXIT_INPUT.equals(operation)) {
+	        	break;
+	        }
+	        
 	        switch (operation) {
 	        case "+":
 	        	calculator.sum(Integer.parseInt(value1), Integer.parseInt(value2));
@@ -48,6 +47,7 @@ public class Runner {
 	        }
 	        System.out.println("Result = " + calculator.getMemory() + "\n");
 		}
+    	scanner.close();
 	}
 
 }

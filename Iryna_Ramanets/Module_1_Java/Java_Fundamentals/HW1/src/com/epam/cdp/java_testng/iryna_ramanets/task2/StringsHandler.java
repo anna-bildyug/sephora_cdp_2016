@@ -10,21 +10,13 @@ import java.util.List;
  */
 public class StringsHandler {
 	
-	private List<String> arr;
-
-	/**
-	 * Class to perform operations with arrays of String
-	 */
-	public StringsHandler(List<String> arr) {
-		this.arr = arr;
-	}
-
 	/**
 	 * Find elements with less duplicated characters
+	 * @param arr 
 	 * @param arr input array
 	 * @return list of element or null if input null
 	 */
-	public String getStringWithLessDuplicateChars() {
+	public static String getStringWithLessDuplicateChars(List<String> arr) {
 		String result = null;
 		
 		if(arr != null) {

@@ -11,24 +11,21 @@ import java.util.List;
  */
 public class IntArrayHandler {
 	
-	private List<Integer> arr;
-
-	public IntArrayHandler(List<Integer> arr) {
-		this.arr = arr;
-	}
-
 	/**
 	 * Find elements that occur more than once and have odd index
 	 * @param arr input array
 	 * @return list of element or null if input null
 	 */
-	public List<Integer> findMultiElementsWithOddIndex() {
+	public static List<Integer> findMultiElementsWithOddIndex(int[] arr) {
 		if(arr == null) return null;
 		
 		List<Integer> result = new ArrayList<Integer>();
-		for(int i = 1; i < arr.size(); i = i + 2) {
-			if(arr.indexOf(arr.get(i)) != arr.lastIndexOf(arr.get(i))) {
-				result.add(arr.get(i));
+		for(int i = 1; i < arr.length; i = i + 2) {
+			for(int j = 0; j < arr.length; j++) {
+				if(i != j && arr[i] == arr[j]) {
+					result.add(arr[i]);
+					break;
+				}				
 			}
 		}
 		return result;
