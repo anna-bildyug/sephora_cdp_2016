@@ -1,14 +1,15 @@
-package com.epam.cdp.volha_ivanova.task1;
+package com.epam.cdp.volha_ivanova.task1.sweets.candies.lollipop;
 
-public class Lollipop extends Candies implements ISweets {
+import com.epam.cdp.volha_ivanova.task1.sweets.candies.Candies;
+
+public class Lollipop extends Candies {
 	/**
-	 * @author Volha_Ivanova Constructor for class Lollipop. Overriding method
-	 *         addToPresent
+	 * @author Volha_Ivanova 
+	 * Constructor for class Lollipop
 	 */
 	private String name;
 	private int lollipopCount;
-	private int weight;
-	private int giftWeight;
+	private int weight;	
 
 	public Lollipop(String name, int weight, int lollipopCount) {
 		this.name = name;
@@ -29,8 +30,6 @@ public class Lollipop extends Candies implements ISweets {
 	}
 
 	@Override
-	public int addToPresent() {
-		giftWeight += getWeight() * getLollipopCount();
-		return giftWeight;
+	public void evaluateGiftWeight() {	
 	}
 }

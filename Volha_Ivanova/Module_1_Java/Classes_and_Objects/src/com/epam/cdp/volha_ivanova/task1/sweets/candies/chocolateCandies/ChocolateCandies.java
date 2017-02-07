@@ -1,14 +1,15 @@
-package com.epam.cdp.volha_ivanova.task1;
+package com.epam.cdp.volha_ivanova.task1.sweets.candies.chocolateCandies;
 
-public class ChocolateCandies extends Candies implements ISweets {
+import com.epam.cdp.volha_ivanova.task1.sweets.candies.Candies;
+
+public class ChocolateCandies extends Candies {
 	/**
-	 * @author Volha_Ivanova Constructor for class ChocolateCandies. Overriding
-	 *         method addToPresent
+	 * @author Volha_Ivanova 
+	 * Constructor for class ChocolateCandies
 	 */
 	private String name;
 	private int chocoCandiesCount;
-	private int weight;
-	private int giftWeight;
+	private int weight;	
 
 	public ChocolateCandies(String name, int weight, int chocoCandiesCount) {
 		this.name = name;
@@ -29,8 +30,6 @@ public class ChocolateCandies extends Candies implements ISweets {
 	}
 
 	@Override
-	public int addToPresent() {
-		giftWeight += getWeight() * getChocoCandiesCount();
-		return giftWeight;
-	}
+	public void evaluateGiftWeight() {			
+	}	
 }
