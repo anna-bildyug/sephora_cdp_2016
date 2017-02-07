@@ -1,14 +1,15 @@
-package com.epam.cdp.volha_ivanova.task1;
+package com.epam.cdp.volha_ivanova.task1.sweets.waffles;
+
+import com.epam.cdp.volha_ivanova.task1.sweets.ISweets;
 
 public class Waffles implements ISweets {
 	/**
-	 * @author Volha_Ivanova Constructor for class Waffles. Overriding method
-	 *         addToPresent
+	 * @author Volha_Ivanova 
+	 * Constructor for class Waffles. Overriding method addToPresent
 	 */
 	private String name;
 	private int weight;
-	private int waffleCount;
-	private int giftWeight;
+	private int waffleCount;	
 
 	public Waffles(String name, int weight, int waffleCount) {
 		this.name = name;
@@ -29,8 +30,6 @@ public class Waffles implements ISweets {
 	}
 
 	@Override
-	public int addToPresent() {
-		giftWeight += getWeight() * getWaffleCount();
-		return giftWeight;
+	public void evaluateGiftWeight() {
 	}
 }
