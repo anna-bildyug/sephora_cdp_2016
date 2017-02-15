@@ -1,0 +1,1 @@
+Ingredients added to salad: [{name: Tomato; calories: 100.0; weight: 300.0}, {name: Onion; calories: 50.0; weight: 100.0}, {name: Cucumber; calories: 75.0; weight: 50.0}]
