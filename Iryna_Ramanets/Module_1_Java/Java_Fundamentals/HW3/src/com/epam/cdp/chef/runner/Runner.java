@@ -27,7 +27,7 @@ public class Runner {
 			System.out.println("Search by name 'Onion2': "
 					+ summerSalad.findByName("Onion2"));
 		} catch (VegetableNotFoundException e) {
-			System.out.println("Vegetable does not found!");
+			System.out.println("Vegetable does not found by name!");
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}
@@ -36,7 +36,7 @@ public class Runner {
 			System.out.println("Search by full calories value '300': "
 					+ summerSalad.findByCalories(300));
 		} catch (VegetableNotFoundException e) {
-			System.out.println("Vegetable does not found!");
+			System.out.println("Vegetable does not found by calories!");
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}
@@ -44,7 +44,7 @@ public class Runner {
 		try {
 			summerSalad.sortByName();
 		} catch (EmptySaladException e) {
-			System.out.println("Cannot sort empty list of ingredients!");
+			System.out.println(e.getMessage());
 		}
 		System.out.println("Salad ingredients sorted by name: "
 				+ summerSalad.getIngredients().toString());
