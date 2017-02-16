@@ -102,7 +102,8 @@ public class Salad implements ICaloriesCalculatable {
 	 */
 	public void sortByName() throws EmptySaladException {
 		if (ingredients.size() == 0) {
-			throw new EmptySaladException();
+			throw new EmptySaladException(
+					"Cannot sort empty list of ingredients!");
 		}
 		Collections.sort(ingredients);
 	}
