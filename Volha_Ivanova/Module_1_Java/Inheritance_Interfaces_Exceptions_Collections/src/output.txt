@@ -1,0 +1,10 @@
+Candies in the present: [com.epam.cdp.volha_ivanova.task1.candies.Chocolate@7852e922, com.epam.cdp.volha_ivanova.task1.candies.ChocolateCandies@4e25154f, com.epam.cdp.volha_ivanova.task1.candies.Lollipop@70dea4e, com.epam.cdp.volha_ivanova.task1.candies.Waffle@5c647e05]
+Name: Chocolate Weight: 100 Price: 5
+Name: ChocolateCandy Weight: 50 Price: 3
+Name: Lollipop Weight: 20 Price: 7
+Name: Waffle Weight: 30 Price: 8
+Gift weight: 200 g
+Name: ChocolateCandy Weight: 50 Price: 3
+Name: Chocolate Weight: 100 Price: 5
+Name: Lollipop Weight: 20 Price: 7
+Name: Waffle Weight: 30 Price: 8

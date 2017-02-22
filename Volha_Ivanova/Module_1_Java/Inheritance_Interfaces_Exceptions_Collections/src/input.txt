@@ -1,0 +1,4 @@
+Chocolate 100 5
+ChocolateCandy 50 3
+Lollipop 20 7
+Waffle 30 8
