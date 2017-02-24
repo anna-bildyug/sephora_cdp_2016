@@ -1,0 +1,36 @@
+package com.epam.cdp.volha_ivanova_task1;
+
+public class Runner {
+
+	int [] arr1;
+			
+	public static void main(String[] args) {
+    int [] arr1 = new int [20];             // declare massive and its length
+    int min = -10;
+    int max = 10;
+    int j = min;
+    
+   
+   
+    for (int i=0; i<arr1.length; i++) {     // filling massive
+    	while (j <= max) { 
+    		if (j!=0) {
+    	arr1[i] = j;
+    	j++;
+    //System.out.println(arr1[i]);
+    	}  	else {j++;}
+    	}
+    } 
+    
+    int sum = 0;
+    for (int i=0; i<arr1.length; i++) {
+    	if ( (i+1)%2 == 0) {
+    		sum += arr1[i]; 
+    		System.out.println("Sum="+sum);
+    }   
+    }
+    
+}
+}
+	
+	
