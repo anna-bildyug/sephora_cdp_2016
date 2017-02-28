@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Calculator" verbose="1">
+	<test name="PositiveTests">
+		<groups>
+			<run>
+				<include name="positive" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.epam.calculator.test.CtgTest" />
+			<class name="com.epam.calculator.test.DivTest" />
+			<class name="com.epam.calculator.test.IsNegativeTest" />
+			<class name="com.epam.calculator.test.SqrtTest" />
+			<class name="com.epam.calculator.test.TgTest" />
+		</classes>
+	</test>
+	<test name="NegativeTests">
+		<groups>
+			<run>
+				<include name="negative" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.epam.calculator.test.CtgTest" />
+			<class name="com.epam.calculator.test.DivTest" />
+			<class name="com.epam.calculator.test.IsNegativeTest" />
+			<class name="com.epam.calculator.test.SqrtTest" />
+			<class name="com.epam.calculator.test.TgTest" />
+		</classes>
+	</test>
+</suite>
