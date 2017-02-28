@@ -8,8 +8,8 @@ public class IsNegativeTest extends BaseTest {
 	
 	@Test(description = "Simle positive isNegative:", dataProvider = "dataForIsNegative", groups = {"positive"})
 	public void testIsNegative(long first, boolean expected) {
-		boolean isNegative = calculator.isNegative(first);
-		Assert.assertEquals(isNegative, expected);
+		boolean isNegativeResult = calculator.isNegative(first);
+		Assert.assertEquals(isNegativeResult, expected);
 	}
 
 	@DataProvider(name = "dataForIsNegative")

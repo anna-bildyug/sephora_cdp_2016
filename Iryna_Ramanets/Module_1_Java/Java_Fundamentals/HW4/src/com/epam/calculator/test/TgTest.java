@@ -8,8 +8,8 @@ public class TgTest extends BaseTest {
 	
 	@Test(description = "Simle positive tg:", dataProvider = "dataForTgPositive", groups = {"positive"})
 	public void testTgPositive(double first, double expected) {
-		double tg = calculator.tg(first);
-		Assert.assertEquals(tg, expected);
+		double tgResult = calculator.tg(first);
+		Assert.assertEquals(tgResult, expected);
 	}
 
 	@DataProvider(name = "dataForTgPositive")

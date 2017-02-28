@@ -8,8 +8,8 @@ public class SqrtTest extends BaseTest {
 	
 	@Test(description = "Simle positive sqrt:", dataProvider = "dataForSqrtPositive", groups = {"positive"})
 	public void testSqrtPositive(double first, double expected) {
-		double sqrt = calculator.sqrt(first);
-		Assert.assertEquals(sqrt, expected);
+		double sqrtResult = calculator.sqrt(first);
+		Assert.assertEquals(sqrtResult, expected);
 	}
 
 	@DataProvider(name = "dataForSqrtPositive")

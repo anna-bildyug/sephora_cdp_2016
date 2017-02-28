@@ -8,8 +8,8 @@ public class CtgTest extends BaseTest {
 	
 	@Test(description = "Simle positive ctg:", dataProvider = "dataForCtgPositive", groups = {"positive"})
 	public void testCtgPositive(double first, double expected) {
-		double ctg = calculator.ctg(first);
-		Assert.assertEquals(ctg, expected);
+		double ctgResult = calculator.ctg(first);
+		Assert.assertEquals(ctgResult, expected);
 	}
 
 	@DataProvider(name = "dataForCtgPositive")

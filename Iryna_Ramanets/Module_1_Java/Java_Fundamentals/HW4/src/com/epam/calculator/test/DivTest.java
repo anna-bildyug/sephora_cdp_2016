@@ -9,8 +9,8 @@ public class DivTest extends BaseTest {
 	@Test(description = "Simle positive long division:", dataProvider = "dataForDivLongPositive",
 			groups = {"positive"})
 	public void testDivLongPositive(long first, long second, long expected) {
-		long div = calculator.div(first, second);
-		Assert.assertEquals(div, expected, "");
+		long divResult = calculator.div(first, second);
+		Assert.assertEquals(divResult, expected);
 	}
 
 	@DataProvider(name = "dataForDivLongPositive")
@@ -40,8 +40,8 @@ public class DivTest extends BaseTest {
 	@Test(description = "Simle positive double division:", dataProvider = "dataForDivDoublePositive",
 			groups = {"positive"})
 	public void testDivDoublePositive(double first, double second, double expected) {
-		double div = calculator.div(first, second);
-		Assert.assertEquals(div, expected, "");
+		double divResult = calculator.div(first, second);
+		Assert.assertEquals(divResult, expected, "");
 	}
 
 	@DataProvider(name = "dataForDivDoublePositive")
