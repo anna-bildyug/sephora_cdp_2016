@@ -25,10 +25,12 @@ public class TestSpam {
 	
 	@BeforeClass
 	public void beforeClass() {
+		if(System.getProperty("webdriver.chrome.driver") == null) {
+			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		}
 		// Create a new instance of the Chrome driver
 		// Chrome version 56.0.2924.87
 		driver = new ChromeDriver();
-
 	}
 
 	@Test
