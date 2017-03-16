@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Gmail" verbose="1">
+    <listeners>
+    <listener class-name="com.epam.cdp.volha_ivanova.task1.test.listener.Listener"></listener>     
+    </listeners>
+    <parameter name="First_user_email" value="user1selenium@gmail.com"/>
+    <parameter name="First_user_password" value="AutomationT3ST"/>
+    <parameter name="Second_user_email" value="user2selenium@gmail.com"/>
+    <parameter name="Second_user_password" value="AutomationT3ST"/>
+
+    <test name="Smoke Tests" preserve-order="true">
+        <classes>
+            <class name="com.epam.cdp.volha_ivanova.task1.test.TwoUsersSignInTest"/>
+        </classes>
+    </test>
+</suite>
