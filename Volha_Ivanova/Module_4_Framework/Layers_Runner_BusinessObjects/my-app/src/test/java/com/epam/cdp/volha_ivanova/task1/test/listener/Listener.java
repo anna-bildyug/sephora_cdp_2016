@@ -10,40 +10,40 @@ import org.testng.Reporter;
 
 public class Listener implements ITestListener, ISuiteListener {
 
-	public void onStart(ISuite arg0) { 
-		Reporter.log("The Suite starts: " + arg0.getName(), true); 
-	} 
-	public void onFinish(ISuite arg0) { 
-		Reporter.log("The Suite finishes: " + arg0.getName(), true); 
+	public void onStart(ISuite arg0) {
+		Reporter.log("The Suite starts: " + arg0.getName(), true);
 	}
- 
-	public void onStart(ITestContext arg0) { 
-		Reporter.log("The Test starts: " + arg0.getName(), true); 
+
+	public void onFinish(ISuite arg0) {
+		Reporter.log("The Suite finishes: " + arg0.getName(), true);
 	}
- 
-	public void onFinish(ITestContext arg0) { 
-		Reporter.log("The test finishes:  " + arg0.getName(), true); 
-	}	
- 
-	public void onTestSuccess(ITestResult arg0) {	 		
+
+	public void onStart(ITestContext arg0) {
+		Reporter.log("The Test starts: " + arg0.getName(), true);
 	}
-  
-	public void onTestFailure(ITestResult arg0) { 
-		
-	}	
- 
-	public void onTestStart(ITestResult arg0) { 
+
+	public void onFinish(ITestContext arg0) {
+		Reporter.log("The test finishes:  " + arg0.getName(), true);
 	}
- 
-	public void onTestSkipped(ITestResult arg0) {  
-	}	
- 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) { 
+
+	public void onTestSuccess(ITestResult arg0) {
 	}
- 
-	public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) { 
-	} 
-	
-	public void afterInvocation(IInvokedMethod arg0, ITestResult arg1) { 
-	} 
+
+	public void onTestFailure(ITestResult arg0) {
+	}
+
+	public void onTestStart(ITestResult arg0) {		
+	}
+
+	public void onTestSkipped(ITestResult arg0) {
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+	}
+
+	public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
+	}
+
+	public void afterInvocation(IInvokedMethod arg0, ITestResult arg1) {
+	}
 }

@@ -7,8 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage {
 	/**
-	 * @author Volha_Ivanova
-	 * Performs signIn method.
+	 * @author Volha_Ivanova Performs signIn method.
 	 */
 	@FindBy(id = "Email")
 	private WebElement inputLogin;
@@ -28,6 +27,7 @@ public class SignInPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
 	public StartPage signIn(String username, String password) {
 		inputLogin.sendKeys(username);
 		buttonNext.click();
