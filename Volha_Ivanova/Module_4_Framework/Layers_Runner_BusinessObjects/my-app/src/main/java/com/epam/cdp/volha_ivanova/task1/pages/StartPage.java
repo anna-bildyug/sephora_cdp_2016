@@ -5,8 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class StartPage {
 	/**
-	 * @author Volha_Ivanova
-	 * Open browser and navigate to Gmail start page.
+	 * @author Volha_Ivanova Open browser and navigate to Gmail start page.
 	 */
 	public static final String BASE_URL = "https://accounts.google.com";
 	private WebDriver driver;
@@ -15,6 +14,7 @@ public class StartPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
 	public void open() {
 		driver.get(BASE_URL);
 		driver.manage().window().maximize();
