@@ -9,7 +9,7 @@ import com.epam.gmail.test.module.dialog.WriteEmailDialog;
 import com.epam.gmail.test.module.page.SighInPage;
 import com.epam.gmail.test.module.page.SpamPage;
 import com.epam.gmail.test.module.toolbar.MainToolbar;
-import com.epam.gmail.test.util.Util;
+import com.epam.gmail.test.util.DriverUtil;
 
 public class TestSpam {
 
@@ -28,8 +28,6 @@ public class TestSpam {
 		if(System.getProperty("webdriver.chrome.driver") == null) {
 			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		}
-		// Create a new instance of the Chrome driver
-		// Chrome version 56.0.2924.87
 		driver = new ChromeDriver();
 	}
 
@@ -48,7 +46,7 @@ public class TestSpam {
 		writeEmailDialog.writeEmail(driver, USER2, subject);
 
 		// reopen browser
-		driver = Util.reopenBrowser(driver, URL);
+		driver = DriverUtil.reopenBrowser(driver, URL);
 
 		// Sign in user2
 		signInPage = new SighInPage(driver);
@@ -59,7 +57,7 @@ public class TestSpam {
 		markAsSpam.moveToSpam(driver, subject);
 
 		// reopen browser
-		driver = Util.reopenBrowser(driver, URL);
+		driver = DriverUtil.reopenBrowser(driver, URL);
 
 		// Sign in user1
 		signInPage = new SighInPage(driver);
@@ -70,7 +68,7 @@ public class TestSpam {
 		writeEmailDialog.writeEmail(driver, USER2, subject);
 
 		//reopen browser
-		driver = Util.reopenBrowser(driver, URL);
+		driver = DriverUtil.reopenBrowser(driver, URL);
 
 		// Sign in user2
 		signInPage = new SighInPage(driver);

@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.epam.gmail.test.util.DriverUtil;
+
 public class MainToolbar {
 	private static final Logger logger = LogManager.getLogger(MainToolbar.class);
 
@@ -25,12 +27,11 @@ public class MainToolbar {
 	}
 
 	public void moveToSpam(WebDriver driver, String subject) {
+		DriverUtil.waitForElementToBeClickable(driver, By.xpath("//*[text()=\"" + subject + "\"]")).click();
+		
+		DriverUtil.waitForElementToBeClickable(driver, reportSpamButton).click();
+		
 		WebDriverWait wait = new WebDriverWait(driver, 40);
-
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"" + subject + "\"]"))).click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(reportSpamButton)).click();
-		
 	    wait.until(
 	    		ExpectedConditions.or(
 	    				ExpectedConditions.visibilityOfElementLocated(By.xpath(spamButtonXpath)),
@@ -41,7 +42,7 @@ public class MainToolbar {
 
 	    if(driver.findElements(By.xpath(spamButtonXpath)).size() > 0) {
 	    	driver.findElement(By.xpath(spamButtonXpath)).click();
-	    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(alertXpath)));
+	    	DriverUtil.waitForVisibilityOf(driver, By.xpath(alertXpath));
 	    	logger.info("Emails marked as SPAM through Modal");
 	    }
 	}
