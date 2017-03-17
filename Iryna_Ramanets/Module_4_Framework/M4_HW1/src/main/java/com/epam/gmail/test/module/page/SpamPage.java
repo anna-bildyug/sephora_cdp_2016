@@ -7,17 +7,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import com.epam.gmail.test.util.DriverUtil;
 
 public class SpamPage {
 	private static final Logger logger = LogManager.getLogger(SpamPage.class);
 
-	@FindBy(xpath = "//span[text()=\"More\" or text()=\"≈˘∏\"]")
+	@FindBy(xpath = "//span[text()=\"More\" or text()=\"–ï—â—ë\"]")
 	private WebElement extendOption;
 
-	@FindBy(xpath = "//a[@title=\"Spam\" or @title=\"—Ô‡Ï\"]")
+	@FindBy(xpath = "//a[@title=\"Spam\" or @title=\"–°–ø–∞–º\"]")
 	private WebElement spamFolder;
 
 	public SpamPage(WebDriver driver) {
@@ -25,15 +25,12 @@ public class SpamPage {
 	}
 
 	public void verifyEmailInSpam(WebDriver driver, String subject) {
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		DriverUtil.waitForElementToBeClickable(driver, extendOption).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(extendOption))
-				.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(spamFolder)).click();
+		DriverUtil.waitForElementToBeClickable(driver, spamFolder).click();
 
 		By xpath = By.xpath("//*[text()=\"" + subject + "\"]");
-		Assert.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(xpath)).isDisplayed(),
+		Assert.assertTrue(DriverUtil.waitForVisibilityOf(driver, xpath).isDisplayed(),
 				"Emails aren't presented in Spam folder.");
 
 		//System.out.println("Emails are presented in Spam folder");

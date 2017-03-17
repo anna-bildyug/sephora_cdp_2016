@@ -1,13 +1,13 @@
 package com.epam.gmail.test.module.page;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.epam.gmail.test.util.DriverUtil;
 
 public class SighInPage {
 	private static final Logger logger = LogManager.getLogger(SighInPage.class);
@@ -29,11 +29,11 @@ public class SighInPage {
 	}
 
 	public void userSignIn(WebDriver driver, String username, String password) {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		DriverUtil.implicitlyWait(driver, 10);
 		inputLogin.sendKeys(username);
 		buttonNext.click();
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		DriverUtil.implicitlyWait(driver, 10);
 		inputPassword.sendKeys(password);
 		buttonSubmit.click();
 		logger.info("User is Signed In");
