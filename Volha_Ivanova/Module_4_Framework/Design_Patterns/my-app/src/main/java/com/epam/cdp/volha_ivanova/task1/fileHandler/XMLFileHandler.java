@@ -1,11 +1,11 @@
-package com.epam.cdp.volha_ivanova.task1.fileHandlerFactory;
+package com.epam.cdp.volha_ivanova.task1.fileHandler;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
 import java.io.PrintWriter;
 
-public class XMLFileHandler extends FileHandler {
+public class XMLFileHandler implements FileHandler {
 
 	private PrintWriter out = null;
 

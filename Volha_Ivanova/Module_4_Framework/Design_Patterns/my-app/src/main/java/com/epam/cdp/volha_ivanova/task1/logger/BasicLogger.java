@@ -1,4 +1,4 @@
-package com.epam.cdp.volha_ivanova.task1.loggerDecorator;
+package com.epam.cdp.volha_ivanova.task1.logger;
 
 public class BasicLogger implements Logger {
 
