@@ -13,6 +13,7 @@ import com.epam.gmail.test.driver.WebDriverSingleton;
 import com.epam.gmail.test.util.DriverUtil;
 
 public class MainToolbar {
+
 	private static final Logger logger = LogManager.getLogger(MainToolbar.class);
 
 	@FindBy(xpath = "//div[@gh=\"mtb\"]//div[@title=\"Report spam\" or @data-tooltip=\"Report spam\"]")
@@ -28,7 +29,6 @@ public class MainToolbar {
 
 	public void moveToSpam(String subject) {
 		DriverUtil.waitForElementToBeClickable(By.xpath("//*[text()=\"" + subject + "\"]")).click();
-		
 		DriverUtil.waitForElementToBeClickable(reportSpamButton).click();
 		
 		WebDriverWait wait = new WebDriverWait(WebDriverSingleton.getWebDriverInstance(), 40);
