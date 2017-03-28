@@ -19,11 +19,9 @@ public class WebDriverSingleton {
 		if (driver == null) {
 			if(creator == null) {
 				// create chrome driver by default
-				driver = new ChromeDriverCreator().createWebDriver();
-			} else {
-				driver = creator.createWebDriver();
+				creator = new ChromeDriverCreator();
 			}
-			driver = new WebDriverDecorator(driver);
+			driver = new WebDriverDecorator(creator.createWebDriver());
 		}
 		return driver;
 	}
